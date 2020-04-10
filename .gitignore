@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CodingFundamentals/.vs/CodingFundamentals/v16
+/CodingFundamentals/SwapCharacters/obj/Debug
+/CodingFundamentals/VerifyUppercase/obj/Debug
