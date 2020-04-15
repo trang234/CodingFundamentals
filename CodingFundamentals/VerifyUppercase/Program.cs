@@ -11,17 +11,22 @@ namespace VerifyUppercase
     {
         static void Main(string[] args)
         {
-            string typing;
+            Menu();
+        }
+
+        private static void Menu()
+        {
+            string option;
             do
             {
+                Console.WriteLine();
                 Console.WriteLine("Main Menu");
                 Console.WriteLine("1. Swaping characteres");
                 Console.WriteLine("2. Verify Uppercase");
                 Console.WriteLine("0. Exit");
                 Console.Write("Please choose the options as above: ");
-                typing = Console.ReadLine();
-                Console.WriteLine();
-                switch (typing)
+                option = Console.ReadLine();
+                switch (option)
                 {
                     case "1":
                         do
@@ -30,14 +35,15 @@ namespace VerifyUppercase
                             string a = "3", b = "4";
                             string c = "c", d = "d";
 
+                            Console.WriteLine();
                             Console.WriteLine("\tSwaping Characters options");
                             Console.WriteLine("\t1.1 Passing Reference Types By Value");
                             Console.WriteLine("\t1.2 Passing Reference Types By Value");
                             Console.WriteLine("\t0.0 Exit");
                             Console.Write("\tPlease choose the options as above: ");
-                            Console.WriteLine();
-                            typing = Console.ReadLine();
-                            switch (typing)
+                            option = Console.ReadLine();
+
+                            switch (option)
                             {
                                 case "1.1":
                                     // Passing Reference Types By Value
@@ -53,9 +59,9 @@ namespace VerifyUppercase
                                     break;
                             }
 
-                        } while (typing != "0.0");
+                        } while (option != "0.0");
                         break;
-  
+
                     case "2":
                         Console.Write("Please enter your full name: ");
                         var fullName = Console.ReadLine();
@@ -63,7 +69,7 @@ namespace VerifyUppercase
                         Console.WriteLine(Message(flag));
                         break;
                 }
-            } while (typing != "0");
+            } while (option != "0");
         }
 
         private static void Replace_PassRefTypeByVal(List<string> strList, string value, string replaceValue)
